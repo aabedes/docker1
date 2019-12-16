@@ -16,7 +16,7 @@ client.connect(config.DB, { useNewUrlParser: true }, (err, db) => {
 });
 
 app.get('/', (req, res) => {
-    res.json("I love docker!");
+    res.json("Docker Testing With Tavis CI via GITHUB!");
 });
 
 app.listen(PORT, () => {

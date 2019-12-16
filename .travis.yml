@@ -5,3 +5,12 @@ services:
 script:
  - docker build -t aabedes/node .
  - docker images aabedes/node
+
+before_deploy:
+ - docker login -u aabedes -p Paceminteris1!
+
+deploy:
+ provider: script
+ script: docker push aabedes/node
+ on:
+  branch: master
